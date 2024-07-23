@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <title>Music Responsive App</title>
+    <link rel="icon" href="/assets/favicons/favicon.ico" type="image/x-icon" />
+    <link
+      rel="icon"
+      href="/assets/favicons/android-chrome-192x192.png"
+      sizes="192x192"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="/assets/favicons/android-chrome-512x512.png"
+      sizes="512x512"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="/assets/favicons/apple-touch-icon.png"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="/assets/favicons/favicon-16x16.png"
+      sizes="16x16"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="/assets/favicons/favicon-32x32.png"
+      sizes="32x32"
+      type="image/png"
+    />
+  </head>
+  <body>
+    <div id="loading"></div>
+    <div class="mobile-nav" style="display: none">
+      <div class="mobile-head-row">
+        <div class="logo">ArabicTone</div>
+        <div class="menu">
+          <i class="ri-menu-line mobile-menu"></i>
+        </div>
+      </div>
+      <div class="mobile-nav-icons">
+        <div class="mobile-nav-icon active">
+          <i class="ri-home-5-fill active"></i>
+          Home
+        </div>
+        <a href="../views/favorite.html">
+          <div class="mobile-nav-icon">
+            <i class="ri-heart-3-line"></i>
+            Favorite
+          </div>
+        </a>
+        <div class="mobile-nav-icon">
+          <i class="ri-music-line"></i>
+          Relax
+        </div>
+        <div class="mobile-nav-icon">
+          <i class="ri-disc-fill"></i>
+          HipHop
+        </div>
+        <div class="mobile-nav-icon">
+          <i class="ri-sound-module-line"></i>
+          New Songs
+        </div>
+        <div class="mobile-nav-icon">
+          <i class="ri-price-tag-3-line"></i>
+          Prices
+        </div>
+      </div>
+    </div>
+    <header>
+      <div class="logo">ArabicTone</div>
+      <div class="nav-icons">
+        <i class="ri-mail-unread-line"></i>
+        <i class="ri-notification-3-line"></i>
+        <i class="ri-netease-cloud-music-line"></i>
+      </div>
+    </header>
+    <main>
+      <aside>
+        <i class="ri-home-5-fill active"></i>
+        <a href="./views/favorite.html"><i class="ri-heart-3-line"></i></a>
+        <i class="ri-music-line"></i>
+        <i class="ri-disc-fill"></i>
+        <i class="ri-sound-module-line"></i>
+        <i class="ri-price-tag-3-line"></i>
+      </aside>
+      <article class="music-play-area">
+        <img src="/assets/radio.png" alt="radio" class="radio-img" />
+        <div class="row">
+          <h1 class="music-name">the suffering</h1>
+          <div class="row-icon">
+            <i
+              class="ri-heart-3-line"
+              id="add-to-favorite"
+              style="display: none; transition: display 1s ease-in-out"
+            ></i>
+            <i
+              class="ri-heart-3-fill"
+              id="favorited"
+              style="display: none; transition: display 1s ease-in-out"
+            ></i>
+          </div>
+        </div>
+        <div class="label music-type">Classic</div>
+        <div class="music-play-line">
+          <p class="music-time">00:00</p>
+          <div id="waveform"></div>
+          <div id="waveform2"></div>
+          <p class="music-total-time">3:35</p>
+        </div>
+        <div class="music-play-icons">
+          <i class="ri-collapse-diagonal-fill"></i>
+          <i class="ri-skip-back-line" id="backward"></i>
+          <div class="play-pause-icon">
+            <i class="ri-play-circle-fill" id="play"></i>
+            <i class="ri-pause-circle-fill" id="pause"></i>
+          </div>
+          <i class="ri-skip-forward-line" id="forward"></i>
+          <i class="ri-shuffle-fill" id="shuffle"></i>
+        </div>
+      </article>
+      <div class="music-list">
+        <div class="category-title">
+          <h1>music <br />categories</h1>
+          <p id="view-all">View all</p>
+        </div>
+        <div class="categories">
+          <ul>
+            <li class="category">Classic</li>
+            <li class="category">Festival</li>
+            <li class="category">Desert</li>
+          </ul>
+        </div>
+        <div class="musics-horizontal">
+          <!-- <div class="music-container">
+            <img src="/assets/album/Arabandmuslim.jpg" />
+            <p class="mName">Arab and Muslim</p>
+            <p class="mAuthor">SergeQuadrado</p>
+          </div> -->
+          <!-- code come from js -->
+        </div>
+        <div class="hint">
+          <i class="ri-arrow-left-line"></i>Scroll<i
+            class="ri-arrow-right-line"
+          ></i>
+        </div>
+        <div class="favorite-playlist">
+          <h2>favorite playlist <span id="fav-length">(4)</span></h2>
+          <!-- code come from js -->
+          <div class="favorite-playlist-lists">
+            <!-- <div class="favorite-music">
+            <img src="/assets/album/arabicdance.jpg" />
+            <div class="desc">
+              <p class="fmName">Arabic Dance</p>
+              <p class="fmAuthor">SergeQuadrado</p>
+            </div>
+            <div class="fIcon">
+              <i class="ri-play-circle-fill"></i>
+            </div>
+          </div> -->
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
+    <script>
+      var animation = lottie.loadAnimation({
+        container: document.getElementById("loading"),
+        renderer: "svg",
+        loop: true,
+        autoplay: true,
+        path: "/assets/Animation - 1721718303234.json",
+      });
+
+      window.addEventListener("load", function () {
+        document.getElementById("loading").style.display = "none";
+      });
+    </script>
+    <script src="index.js" type="module"></script>
+    <script src="/scripts/ScrollUsingDrag.js"></script>
+    <script src="scripts/favoritelist.js" type="module"></script>
+    <script src="/scripts/Trailanim.js"></script>
+  </body>
+</html>
