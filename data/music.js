@@ -7,7 +7,7 @@ export const musicdata =
         {
           id: 0,
           name: "A Desert Tale",
-          img: "assets/album/adeserttale.jpg",
+          img: "assets/album/Adeserttale.jpg",
           musicsrc:
             "assets/musics/a-desert-tale-ethnic-amp-fantasy-background-music-109862.mp3",
           author: "SergeQuadrado",
