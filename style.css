@@ -4,7 +4,7 @@
 
 @font-face {
     font-family: 'p2p';
-    src: url(/font/PressStart2P-Regular.ttf);
+    src: url('font/PressStart2P-Regular.ttf');
 }
 
 #loading {
