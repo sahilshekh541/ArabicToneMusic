@@ -1,4 +1,4 @@
-var localstoragemusicdata = JSON.parse(localStorage.getItem("musicdata"));
+var localstoragemusicdata = JSON.parse(localStorage.getItem("musicdata")) || [];
 
 export const musicdata =
   localstoragemusicdata.length > 0
