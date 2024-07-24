@@ -6,7 +6,7 @@ export const musicdata =
     : [
         {
           id: 0,
-          name: "A Desert Tale",
+          name: "A Desert Tale ",
           img: "assets/album/Adeserttale.jpg",
           musicsrc:
             "assets/musics/a-desert-tale-ethnic-amp-fantasy-background-music-109862.mp3",
